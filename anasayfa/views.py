@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def anasayfa_f(request):
+def anasayfaf(request):
   return HttpResponse("Web sitesine hoş geldiniz.")
 
-def anasayfa_f_en(request):
+def anasayfafen(request):
   return HttpResponse("Welcome to the website.")
