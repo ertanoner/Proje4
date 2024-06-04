@@ -1,18 +1,38 @@
 {% extends 'ana2.html' %}
 {% block anabolum %}
-  <h1>Öğretmen sayfası</h1>
-  <a href="/" class="shadow-sm" style="box-shadow:10px 10px 10px red;">Ana sayfa</a>
+  <h1>Tasiyan sayfası</h1>
+  <!-- <a href="/" class="shadow-sm" style="box-shadow:10px 10px 10px red;">Ana sayfa</a> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <div style="box-shadow:10px 10px 10px red; width:200px">deneme</div>
-  <div class="shadow-lg" width="200px" >deneme2</div>
-  <div class="icon-bar">
+  <!-- <div style="box-shadow:10px 10px 10px red; width:200px">deneme</div> -->
+  <!-- <div class="shadow-lg" width="200px" >deneme2</div> -->
+
+
+
+  <div class="row mt-4">
+    <div class="col-md-1">
+
+   <div class="icon-bar ">
     <a class="active" href="/"><i class="fa fa-home"></i></a>
-    <a href="#"><i class="fa fa-search"></i></a>
-    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="/tasiyanlar"><i class="fa fa-search"></i></a>
+    <a href="/tasiyanlar"><i class="fa fa-list"></i></a>
+    <!-- <a href="#"><i class="fa fa-plus"></i></a> -->
+    <a href="/tasiyan/ekle"><i class="fa fa-address-book"></i></a>
     <a href="#"><i class="fa fa-globe"></i></a>
     <a href="#"><i class="fa fa-trash"></i></a>
   </div>
-  <a href="/" class="btn btn-danger text-success shadow-sm">ana sayfaya dön</a>
+    </div>
+      <div class="col-sm-1"></div>
+    <div class="col-md-9">
+
+
+      {%block ortakalan%}
+      {% endblock %}
+
+    </div>
+
+  </div>
+
+  <!-- <a href="/" class="btn btn-danger text-success shadow-sm">ana sayfaya dön</a> -->
 <style>
   .icon-bar {
     width: 90px; /* Set a specific width */

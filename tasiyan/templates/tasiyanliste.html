@@ -1,0 +1,32 @@
+{%extends 'tasiyanT.html'%}
+{%block ortakalan%}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">TC</th>
+      <th scope="col">Adı Soyadı</th>
+      <th scope="col">Branşı</th>
+      <th scope="col">Not</th>
+      <th scope="col">İşlemler</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in tasiyanliste %}
+    <tr>
+      <th scope="row">{{x.id}}</th>
+      <td>{{x.TC}}</td>
+      <td>{{x.AdiSoyadi}}</td>
+      <td>{{x.Firma}}</td>
+      <td>{{x.Aciklama}}</td>
+      <td>
+        <a href="/tasiyan/sil/{{x.id}}" class="btn btn-secondary">Sil</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  {%block detay%}
+  {% endblock %}
+{%endblock%}
