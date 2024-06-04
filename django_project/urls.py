@@ -17,10 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import anasayfa.views
+import gonderen.views
+import tasiyan.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', anasayfa.views.anasayfa_f_en, name='home'),  
-    path('anasayfa/', anasayfa.views.anasayfa_f, name='as'),  
-    path('', anasayfa.views.anasayfa_f, name='anasayfatr'),  
-]
+     path('home/', anasayfa.views.anasayfafen, name="home"),
+        path('anasayfa/', anasayfa.views.anasayfaf),
+        path('', anasayfa.views.anasayfaf),
+        path('gonderen/', gonderen.views.gonderenf,name="gonderenler"),
+        path('tasiyan/',tasiyan.views.tasiyanf),
+        path('gonderen/ekle', gonderen.views.ekle),
+        path('gonderen/detay/<int:id>', gonderen.views.detay),
+        path('gonderen/sil/<int:id>', gonderen.views.sil),
+        path('gonderen/guncelle/<int:id>', gonderen.views.guncelle),
+        path('gonderenler', gonderen.views.listele,name="gonderenliste"),
+        path('gonderenler2', gonderen.views.listele2,name="gonderenliste2"),
+    ]

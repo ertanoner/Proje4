@@ -1,0 +1,37 @@
+{% extends 'abc.html'%}
+{%load static%}
+
+{% block anabolum%}  
+  <!-- <img src="{%static 'logo.png'%}" alt=""> -->
+    <!-- <img height="50" src="{%static 'home1.png'%}" alt=""> -->
+  <h1 style="color:#B1DE94;font-size: 40px;">Gonderen sayfası</h1>
+  <!-- <a href="/">Ana sayfa</a> -->
+<!-- <img src="{%static 'ogrenci2.jpg'%}" alt="">   -->
+<a href="/">
+    <img height="50" src="{%static 'home1.png'%}" alt="">
+    </a>
+
+  <hr>
+
+  <a href="/gonderen/ekle" type="button" class="btn btn-outline-primary">Gonderen ekle</a>
+  <a href="/gonderenler" type="button" class="btn btn-outline-warning">Gonderen listesi</a>
+  <a href="/gonderenler2" type="button" class="btn btn-outline-secondary">Gonderenlistesi2</a>
+
+<style>
+  body{
+    /* background-color: green; */
+     background="{%static 'b1.jpg'%}"
+  }
+</style>
+  {%block liste%}
+  {% endblock %}
+
+  {%block ekle%}
+  {% endblock %}
+
+
+
+
+  <!-- <h2>Program kullanımı</h2>
+  <iframe src="https://youtube.com/embed/oJh48UDcTnE" frameborder="0"></iframe> -->
+{% endblock %}

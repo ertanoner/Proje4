@@ -1,0 +1,27 @@
+{%extends 'gonderenler.html'%}
+{%block liste%}
+<div class="d-flex justify-content-center">
+
+  {% for x in gonderenliste %} 
+    <!-- dikkat, : işareti yok -->
+    <div class="card m-1" style="width: 18rem;"> 
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">{{ x.AdiSoyadi }}</h5>
+        <p class="card-text">{{x.id}}</p>
+        <p class="card-text">{{ x.TC }}</p>
+        <p class="card-text"></p>
+
+        <a class="btn btn-outline-success btn-sm" href="/gonderen/detay/{{x.id}}"">Detay</a>
+        <a class="btn btn-outline-danger btn-sm" href="/gonderen/sil/{{x.id}}">Sil</a>
+        <a class="btn btn-outline-primary btn-sm" href="/gonderen/guncelle/{{x.id}}">Düzenle</a>
+      </div>
+    </div>
+
+
+    {% endfor %}
+</div>
+
+  {%block detay%}
+  {% endblock %}
+{%endblock%}
