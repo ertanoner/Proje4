@@ -25,7 +25,7 @@ class TasiyanForm(forms.ModelForm):
 
   class Meta:
     model = Tasiyan
-    fields = ['TC', 'AdiSoyadi', 'Firma', 'Aciklama']
+    fields = ['TC', 'AdiSoyadi','TelNo', 'Firma', 'Aciklama']
 
 
 def ekle(request):

@@ -21,8 +21,7 @@ class GondericiForm(forms.ModelForm):
 
     class Meta:
         model = Yuksahibi
-        fields = ['TC', 'AdiSoyadi', 'Aciklama']
-
+        fields = ['TC', 'AdiSoyadi','Yuk', 'Aciklama'] 
 
 def ekle(request):
     if request.method == 'POST':
