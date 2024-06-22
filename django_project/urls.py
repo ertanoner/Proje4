@@ -31,7 +31,7 @@ urlpatterns = [
         path('gonderen/sil/<int:id>', gonderen.views.sil),
         path('gonderen/guncelle/<int:id>', gonderen.views.guncelle),
         path('gonderenler', gonderen.views.listele, name="gonderenliste"),
-        path('gonderenler2', gonderen.views.listele2, name="gonderenliste2"),
+        # path('gonderenler2', gonderen.views.listele2, name="gonderenliste2"),
         path('tasiyan/', tasiyan.views.tasiyanf, name="tasiyan"),
         path('tasiyanlar/', tasiyan.views.listele, name="tasiyanliste"),
         path('tasiyan/ekle', tasiyan.views.ekle),

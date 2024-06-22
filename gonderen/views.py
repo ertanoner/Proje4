@@ -43,13 +43,13 @@ def listele(request):
     }
     return HttpResponse(template.render(context, request))
 
-def listele2(request):
-    gonderenliste = Yuksahibi.objects.all()
-    template = loader.get_template('gonderenlistele2.html')
-    context = {
-        'gonderenliste': gonderenliste,
-    }
-    return HttpResponse(template.render(context, request))
+# def listele2(request):
+    # gonderenliste = Yuksahibi.objects.all()
+    # template = loader.get_template('gonderenlistele2.html')
+    # context = {
+    #     'gonderenliste': gonderenliste,
+    # }
+    # return HttpResponse(template.render(context, request))
 
 
 # def gonderen(request):
