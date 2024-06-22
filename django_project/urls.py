@@ -36,4 +36,5 @@ urlpatterns = [
         path('tasiyanlar/', tasiyan.views.listele, name="tasiyanliste"),
         path('tasiyan/ekle', tasiyan.views.ekle),
         path('tasiyan/sil/<int:id>', tasiyan.views.sil),
+        path('tasiyan/duzenle/<int:id>', tasiyan.views.duzenle),
     ]

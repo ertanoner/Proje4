@@ -7,6 +7,7 @@ def tasiyanf(request):
   template = loader.get_template('tasiyanT.html')
   return HttpResponse(template.render())
 
+
 from tasiyan.models import Tasiyan
 from django import forms
 from django.shortcuts import redirect
@@ -25,7 +26,7 @@ class TasiyanForm(forms.ModelForm):
 
   class Meta:
     model = Tasiyan
-    fields = ['TC', 'AdiSoyadi','TelNo', 'Firma', 'Aciklama']
+    fields = ['TC', 'AdiSoyadi', 'TelNo', 'Firma', 'Aciklama']
 
 
 def ekle(request):
@@ -39,8 +40,22 @@ def ekle(request):
     xx = TasiyanForm()
   return render(request, 'tasiyanekle.html', {'form': xx})
 
+
 def sil(request, id):
   item = Tasiyan.objects.get(id=id)
   item.delete()
   return redirect('tasiyanliste')
 
+
+def duzenle(request, id):
+
+  gonderen = Tasiyan.objects.get(id=id)
+  if request.method == 'POST':
+    form = TasiyanForm(request.POST, instance=gonderen)
+    if form.is_valid():
+      # Form verileri işleme
+      form.save()  # Veritab. kaydetme
+      return redirect('tasiyanliste')  #url name
+  else:
+    form = TasiyanForm(instance=gonderen)
+  return render(request, 'duzenle.html', {'form': form})
