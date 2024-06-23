@@ -26,7 +26,7 @@ Bu sayfadan yeni yük sahibi bilgileri girilebilir, girilmiş olan bilgi düzenl
 
 <hr/>
 
-<img src='anasayfa/static/lojistikGonderenSCR3.jpeg'/>
+<img width='200px' height='100px'  src='anasayfa/static/lojistikGonderenSCR3.jpeg'/>
 
 Yeni bir gönderici kaydı eklenmesini sağlayan tablo görüntüsüdür.
 
@@ -44,7 +44,7 @@ Bu sayfadan yeni nakliyeci bilgileri girilebilir, girilmiş olan bilgi düzenlen
 
 <hr/>
 
-<img src='anasayfa/static/lojistikTasiyanSCR3.jpeg'/>
+<img width='200px' height='100px' src='anasayfa/static/lojistikTasiyanSCR3.jpeg'/>
 
 Yeni bir nakliyeci kaydı eklenmesini sağlayan tablo görüntüsüdür. Sol tarafta bulunan kişi ikonuna basılarak yukarıdaki yeni kayıt ekranı getirilir.
 
